@@ -1,0 +1,13 @@
+<div class="cart-page">
+    <h1>Cart-Page</h1>
+    <div class="cart-details">
+        <div class="cart-item" *ngFor="let cart of cartData">
+            <img src="{{cart.image}}" alt="{{cart.name}}">
+            <div class="item-details">
+                <p class="product-name">Product Name: {{cart.name}}</p>
+                <p class="product-price">Price: {{cart.price}}</p>
+                <button class="remove-button">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>

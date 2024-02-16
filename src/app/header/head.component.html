@@ -1,0 +1,41 @@
+<nav class="nav">
+    <h1 routerLink="/">Shop-Now</h1>
+    <div *ngIf="allMenu=='default'" >
+        <input type="text" placeholder="Search for Products" #searchQuery>
+        <button (click)="submitSearch(searchQuery.value)"> Search</button>
+    </div>
+    <div [ngSwitch]="allMenu">
+        <ul *ngSwitchCase="'default'">
+        
+            <li><a routerLink="/"> Home  </a></li>
+            <li><a routerLink="/seller-auth"> Seller </a></li>
+            <li><a routerLink="/user-authentication"> Login </a></li>
+            <li><a routerLink="/cart-page"> Cart({{cartItems}}) </a></li>
+        
+        
+        </ul>
+        <ul *ngSwitchCase="'seller'">
+            <li><a href="#">{{sellerName  | titlecase   }}</a></li>
+            <li><a routerLink="/seller-home"> All Products  </a></li>
+            <li><a routerLink="seller-add-product"> Add Products </a></li>
+            <li><a (click)="sellerLogout()"> Logout </a></li>
+            
+        
+        
+        </ul>
+        <ul *ngSwitchCase="'user'">
+            <li><a routerLink="/"> Home  </a></li>
+            <!-- <li><a routerLink="/seller-auth"> Seller </a></li> -->
+            <li><a routerLink="/user-authentication"> {{userName | titlecase}} </a></li>
+            <li><a (click)="userLogOut()"> Logout </a></li>
+            <li><a routerLink="/cart-page"> Cart({{cartItems}}) </a></li>
+            
+        
+        
+        </ul>
+    </div>
+   
+    </nav>
+    
+     
+      

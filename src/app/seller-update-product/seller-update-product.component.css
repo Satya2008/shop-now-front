@@ -1,0 +1,60 @@
+
+.UpdateProducts {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .UpdateProducts h1 {
+    text-align: center;
+  }
+  
+  .common-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-Input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .form-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background-color: #45a049;
+  }
+  
+  .productMessage {
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .UpdateProducts {
+      padding: 10px;
+    }
+  
+    .form-Input {
+      font-size: 14px;
+    }
+  
+    .form-button {
+      font-size: 14px;
+    }
+  }
+  
